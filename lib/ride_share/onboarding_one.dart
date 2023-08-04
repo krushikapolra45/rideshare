@@ -12,9 +12,14 @@ class OnboardingOne extends StatefulWidget {
 class _OnboardingOneState extends State<OnboardingOne> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: SafeArea(
-        child: Column(
+    Size size = MediaQuery.of(context).size;
+    double screenHeight = size.height;
+    double screenWidth = size.width;
+    EdgeInsets devicePadding = MediaQuery.of(context).viewPadding;
+    return Padding(
+      padding: devicePadding,
+      child: Scaffold(
+        body: Column(
           children: [
             const Padding(
               padding: EdgeInsets.all(8.0),
@@ -37,8 +42,7 @@ class _OnboardingOneState extends State<OnboardingOne> {
                     children: [
                       Image.asset(
                         "assets/images_one/Anywhere you.png",
-                        width: 375,
-                        // height: 208,
+                        width: screenWidth / 1.1,
                       ),
                       const SizedBox(height: 40),
                       const Text(
@@ -151,7 +155,7 @@ class _OnboardingOneState extends State<OnboardingOne> {
                     children: [
                       Image.asset(
                         "assets/images_one/At anytime.png",
-                        width: 375,
+                        width: screenWidth / 1.1,
                         // height: 208,
                       ),
                       const SizedBox(height: 40),
@@ -189,7 +193,7 @@ class _OnboardingOneState extends State<OnboardingOne> {
                     children: [
                       Image.asset(
                         "assets/images_one/book car.png",
-                        width: 375,
+                        width: screenWidth / 1.1,
                         // height: 208,
                       ),
                       const SizedBox(height: 40),
@@ -224,8 +228,8 @@ class _OnboardingOneState extends State<OnboardingOne> {
                     ],
                   ),
                 ],
-                indicatorDotHeight: 7.0,
-                indicatorDotWidth: 7.0,
+                indicatorDotHeight: screenHeight / 140,
+                indicatorDotWidth: screenWidth / 70,
                 indicatorActiveDotColor: const Color(0xFFFFFFFF),
                 indicatorType: IndicatorType.colourTransitionDots,
                 indicatorPosition: IndicatorPosition.bottomCenter,
