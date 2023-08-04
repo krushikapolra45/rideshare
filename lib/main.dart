@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import 'ride_share/onboarding_one.dart';
+import 'package:rideshare/view/onboarding/onboarding_one.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,6 +16,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        fontFamily: "Poppins",
         useMaterial3: true,
       ),
       home: const OnboardingOne(),

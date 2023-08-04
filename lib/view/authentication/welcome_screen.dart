@@ -10,14 +10,6 @@ class WelcomeScreen extends StatefulWidget {
 class _WelcomeScreenState extends State<WelcomeScreen> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: SafeArea(
-        child: Column(
-          children: [
-
-          ],
-        ),
-      ),
-    );
+    return const Placeholder();
   }
 }
