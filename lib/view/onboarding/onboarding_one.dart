@@ -16,15 +16,14 @@ class _OnboardingOneState extends State<OnboardingOne> {
     double screenHeight = size.height;
     double screenWidth = size.width;
     EdgeInsets devicePadding = MediaQuery.of(context).viewPadding;
+
     return Padding(
       padding: devicePadding,
       child: Scaffold(
         body: Column(
           children: [
             Padding(
-              padding: EdgeInsets.all(
-                screenWidth / 18.0,
-              ),
+              padding: EdgeInsets.all(screenWidth / 18.0),
               child: const Align(
                 alignment: Alignment.topRight,
                 child: Text(

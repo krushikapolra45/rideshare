@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:rideshare/view/onboarding/onboarding_one.dart';
 
+import 'view/authentication/welcome_screen.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -19,7 +21,7 @@ class MyApp extends StatelessWidget {
         fontFamily: "Poppins",
         useMaterial3: true,
       ),
-      home: const OnboardingOne(),
+      home: const WelcomeScreen(),
     );
   }
 }
