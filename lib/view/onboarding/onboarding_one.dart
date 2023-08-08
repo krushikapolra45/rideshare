@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:onboarding_animation/onboarding_animation.dart';
 import 'package:percent_indicator/percent_indicator.dart';
+import 'package:rideshare/res/constant/app_assets.dart';
+import 'package:rideshare/res/constant/app_colors.dart';
+import 'package:rideshare/res/constant/app_strings.dart';
 
 class OnboardingOne extends StatefulWidget {
   const OnboardingOne({Key? key}) : super(key: key);
@@ -27,10 +30,10 @@ class _OnboardingOneState extends State<OnboardingOne> {
               child: const Align(
                 alignment: Alignment.topRight,
                 child: Text(
-                  "skip",
+                  AppStrings.appTitle,
                   style: TextStyle(
                     fontSize: 16,
-                    color: Color(0xFF414141),
+                    color: AppColors.darkGrayColor,
                   ),
                 ),
               ),
@@ -42,27 +45,25 @@ class _OnboardingOneState extends State<OnboardingOne> {
                   Column(
                     children: [
                       Image.asset(
-                        "assets/images/Anywhere you.png",
+                        AppAssets.appOnBoarding,
                         width: screenWidth / 1.1,
                       ),
                       SizedBox(height: screenHeight / 20),
                       const Text(
-                        "Anywhere you are",
+                        AppStrings.hadding,
                         style: TextStyle(
                           fontSize: 24,
-                          color: Color(0xFF414141),
-                          fontFamily: "Poppins",
+                          color: AppColors.darkGrayColor,
                           fontWeight: FontWeight.w500,
                         ),
                       ),
                       SizedBox(height: screenHeight / 60),
-                      const Text(
+                      Text(
+                        AppStrings.text,
                         textAlign: TextAlign.center,
-                        "Sell houses easily with the help of\nListenoryx and to make this line big\n I am writing more.",
                         style: TextStyle(
                           fontSize: 14,
-                          color: Color(0xFFA0A0A0),
-                          fontFamily: "Poppins",
+                          color: AppColors.lightGrayColor,
                           fontWeight: FontWeight.w500,
                         ),
                       ),
@@ -83,28 +84,26 @@ class _OnboardingOneState extends State<OnboardingOne> {
                   Column(
                     children: [
                       Image.asset(
-                        "assets/images/At anytime.png",
+                        AppAssets.appOnBoardingTime,
                         width: screenWidth / 1.1,
                         // height: 208,
                       ),
                       SizedBox(height: screenHeight / 20),
                       const Text(
-                        "At anytime",
+                        AppStrings.haddingSecond,
                         style: TextStyle(
                           fontSize: 24,
-                          color: Color(0xFF414141),
-                          fontFamily: "Poppins",
+                          color: AppColors.darkGrayColor,
                           fontWeight: FontWeight.w500,
                         ),
                       ),
                       SizedBox(height: screenHeight / 60),
                       const Text(
                         textAlign: TextAlign.center,
-                        "Sell houses easily with the help of\nListenoryx and to make this line big\n I am writing more.",
+                        AppStrings.text,
                         style: TextStyle(
                           fontSize: 14,
-                          color: Color(0xFFA0A0A0),
-                          fontFamily: "Poppins",
+                          color: AppColors.lightGrayColor,
                           fontWeight: FontWeight.w500,
                         ),
                       ),
@@ -121,28 +120,26 @@ class _OnboardingOneState extends State<OnboardingOne> {
                   Column(
                     children: [
                       Image.asset(
-                        "assets/images/book car.png",
+                        AppAssets.appBookCar,
                         width: screenWidth / 1.1,
                         // height: 208,
                       ),
                       SizedBox(height: screenHeight / 20),
                       const Text(
-                        "Book your car",
+                        AppStrings.haddingThird,
                         style: TextStyle(
                           fontSize: 24,
-                          color: Color(0xFF414141),
-                          fontFamily: "Poppins",
+                          color: AppColors.darkGrayColor,
                           fontWeight: FontWeight.w500,
                         ),
                       ),
                       SizedBox(height: screenHeight / 60),
                       const Text(
                         textAlign: TextAlign.center,
-                        "Sell houses easily with the help of\nListenoryx and to make this line big\n I am writing more.",
+                        AppStrings.text,
                         style: TextStyle(
                           fontSize: 14,
-                          color: Color(0xFFA0A0A0),
-                          fontFamily: "Poppins",
+                          color: AppColors.lightGrayColor,
                           fontWeight: FontWeight.w500,
                         ),
                       ),
