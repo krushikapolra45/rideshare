@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:rideshare/res/common/app_button.dart';
 import 'package:rideshare/res/constant/app_assets.dart';
 import 'package:rideshare/res/constant/app_colors.dart';
 import 'package:rideshare/res/constant/app_strings.dart';
@@ -39,7 +40,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                 width: screenWidth / 1.1,
               ),
             ),
-            SizedBox(height: screenHeight / 15),
+            // SizedBox(height: screenHeight / 15),
             const Text(
               AppStrings.welComeTitle,
               style: TextStyle(
@@ -48,7 +49,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                 fontWeight: FontWeight.w500,
               ),
             ),
-            SizedBox(height: screenHeight / 60),
+            SizedBox(height: screenHeight / 20),
             const Text(
               AppStrings.text,
               textAlign: TextAlign.center,
@@ -58,6 +59,12 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                 fontWeight: FontWeight.w500,
               ),
             ),
+            AppButton(
+              text: "create an account",
+              width: screenWidth / 1.1,
+              hight: screenHeight/20,
+              onPress: (){},
+            ),
           ],
         ),
       ),
@@ -65,10 +72,4 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
   }
 }
 
-// GoogleMap(
-//   onMapCreated: _onMapCreated,
-//   initialCameraPosition: CameraPosition(
-//     target: _center,
-//     zoom: 11.0,
-//   ),
 // ),

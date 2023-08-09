@@ -1,18 +1,52 @@
 import 'package:flutter/material.dart';
+import 'package:rideshare/res/constant/app_colors.dart';
 
-class AppButton extends StatefulWidget {
-  const AppButton({Key? key}) : super(key: key);
+class AppButton extends StatelessWidget {
+  final String? text;
+  final double? radius;
+  final double? width;
+  final double? hight;
+  final void Function()? onPress;
 
-  @override
-  State<AppButton> createState() => _AppButtonState();
-}
+  const AppButton({
+    Key? key,
+    this.radius,
+    this.width,
+    this.hight,
+    this.onPress,
+    this.text,
+  }) : super(key: key);
 
-class _AppButtonState extends State<AppButton> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Column(
-        children: [],
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: ElevatedButton(
+        style: ButtonStyle(
+          backgroundColor: const MaterialStatePropertyAll(AppColors.darkGreenColor),
+          shape: MaterialStatePropertyAll(RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(
+            radius ?? 8,
+          ))),
+          fixedSize: MaterialStatePropertyAll(
+            Size(width!, hight!),
+          ),
+        ),
+        onPressed: onPress ?? () {},
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              text ?? "",
+              style: const TextStyle(
+                fontSize: 16,
+                color: Colors.black,
+                fontWeight: FontWeight.w500,
+                fontFamily: "Poppins",
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
