@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:onboarding_animation/onboarding_animation.dart';
-import 'package:percent_indicator/percent_indicator.dart';
 import 'package:rideshare/res/constant/app_assets.dart';
 import 'package:rideshare/res/constant/app_colors.dart';
 import 'package:rideshare/res/constant/app_strings.dart';
@@ -40,8 +38,9 @@ class _OnboardingOneState extends State<OnboardingOne> {
             ),
             SizedBox(height: screenHeight / 9.0),
             Expanded(
-              child: OnBoardingAnimation(
-                pages: [
+              child: PageView(
+                scrollDirection: Axis.horizontal,
+                children: [
                   Column(
                     children: [
                       Image.asset(
@@ -66,18 +65,6 @@ class _OnboardingOneState extends State<OnboardingOne> {
                           color: AppColors.lightGrayColor,
                           fontWeight: FontWeight.w500,
                         ),
-                      ),
-                      const SizedBox(height: 20),
-                      CircularPercentIndicator(
-                        radius: 45.0,
-                        lineWidth: 4.0,
-                        percent: 0.30,
-                        center: const Icon(Icons.arrow_forward),
-                        backgroundColor: const Color(0xFFB9E5D1),
-                        progressColor: const Color(0xFF08B783),
-                      ),
-                      const Padding(
-                        padding: EdgeInsets.symmetric(horizontal: 10.0),
                       ),
                     ],
                   ),
@@ -107,14 +94,6 @@ class _OnboardingOneState extends State<OnboardingOne> {
                           fontWeight: FontWeight.w500,
                         ),
                       ),
-                      CircularPercentIndicator(
-                        radius: 45.0,
-                        lineWidth: 4.0,
-                        percent: 0.70,
-                        center: const Icon(Icons.arrow_forward),
-                        backgroundColor: const Color(0xFFB9E5D1),
-                        progressColor: const Color(0xFF08B783),
-                      ),
                     ],
                   ),
                   Column(
@@ -143,22 +122,9 @@ class _OnboardingOneState extends State<OnboardingOne> {
                           fontWeight: FontWeight.w500,
                         ),
                       ),
-                      CircularPercentIndicator(
-                        radius: 45.0,
-                        lineWidth: 4.0,
-                        percent: 0.90,
-                        center: const Text("Go"),
-                        backgroundColor: const Color(0xFFB9E5D1),
-                        progressColor: const Color(0xFF08B783),
-                      ),
                     ],
                   ),
                 ],
-                indicatorDotHeight: screenHeight / 140,
-                indicatorDotWidth: screenWidth / 70,
-                indicatorActiveDotColor: const Color(0xFFFFFFFF),
-                indicatorType: IndicatorType.colourTransitionDots,
-                indicatorPosition: IndicatorPosition.bottomCenter,
               ),
             ),
           ],

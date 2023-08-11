@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:rideshare/view/authentication/welcome_screen.dart';
+
+import 'view/authentication/sign_up.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
         fontFamily: "Poppins",
         useMaterial3: true,
       ),
-      home: const WelcomeScreen(),
+      home: const SignUp(),
     );
   }
 }

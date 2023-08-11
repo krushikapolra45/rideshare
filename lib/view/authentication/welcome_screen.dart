@@ -12,16 +12,6 @@ class WelcomeScreen extends StatefulWidget {
 }
 
 class _WelcomeScreenState extends State<WelcomeScreen> {
-  // Completer<GoogleMapController> _controller = Completer();
-  //
-  // static const LatLng _center = const LatLng(45.521563, -122.677433);
-  //
-  // void _onMapCreated(GoogleMapController controller) {
-  //   _controller.complete(controller);
-  // }
-  //
-  // static const CameraPosition _kLake = CameraPosition(bearing: 192.8334901395799, target: LatLng(37.43296265331129, -122.08832357078792), tilt: 59.440717697143555, zoom: 19.151926040649414);
-
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -29,16 +19,14 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
     double screenWidth = size.width;
     EdgeInsets devicePadding = MediaQuery.of(context).viewPadding;
 
-    return SafeArea(
+    return Padding(
+      padding: devicePadding,
       child: Scaffold(
         body: Column(
           children: [
-            Padding(
-              padding: EdgeInsets.all(screenHeight / 35),
-              child: Image.asset(
-                AppAssets.appWelCome,
-                width: screenWidth / 1.1,
-              ),
+            Image.asset(
+              AppAssets.appWelCome,
+              width: screenWidth / 1.1,
             ),
             // SizedBox(height: screenHeight / 15),
             const Text(
@@ -49,9 +37,9 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                 fontWeight: FontWeight.w500,
               ),
             ),
-            SizedBox(height: screenHeight / 20),
+            SizedBox(height: screenHeight / 50),
             const Text(
-              AppStrings.text,
+              AppStrings.welComeText,
               textAlign: TextAlign.center,
               style: TextStyle(
                 fontSize: 14,
@@ -59,17 +47,47 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                 fontWeight: FontWeight.w500,
               ),
             ),
-            AppButton(
-              text: "create an account",
-              width: screenWidth / 1.1,
-              hight: screenHeight/20,
-              onPress: (){},
+            const Spacer(),
+            Padding(
+              padding: const EdgeInsets.only(right: 8.0, left: 8.0),
+              child: AppButton(
+                text: "create an account",
+                width: screenWidth / 1.0,
+                hight: screenHeight / 16,
+                onPress: () {},
+              ),
             ),
+            SizedBox(height: screenHeight / 50),
+            Padding(
+              padding: EdgeInsets.all(screenWidth / 18.0),
+              child: OutlinedButton(
+                style: ButtonStyle(
+                  shape: MaterialStatePropertyAll(
+                    RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+                  ),
+                  fixedSize: MaterialStatePropertyAll(
+                    Size(screenWidth / 1.0, screenHeight / 16),
+                  ),
+                  side: const MaterialStatePropertyAll(BorderSide(
+                    color: AppColors.darkGreenColor,
+                    width: 1,
+                  )),
+                ),
+                onPressed: () {},
+                child: const Text(
+                  "log in",
+                  style: TextStyle(
+                    fontSize: 16,
+                    color: AppColors.darkGreenColor,
+                    fontWeight: FontWeight.w400,
+                  ),
+                ),
+              ),
+            ),
+            SizedBox(height: screenHeight / 1.1),
           ],
         ),
       ),
     );
   }
 }
-
-// ),
