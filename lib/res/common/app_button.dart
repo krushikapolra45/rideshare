@@ -19,31 +19,38 @@ class AppButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ElevatedButton(
-      style: ButtonStyle(
-        backgroundColor: const MaterialStatePropertyAll(AppColors.darkGreenColor),
-        shape: MaterialStatePropertyAll(RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(
-          radius ?? 8,
-        ))),
-        fixedSize: MaterialStatePropertyAll(
-          Size(width!, hight!),
-        ),
-      ),
-      onPressed: onPress ?? () {},
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Text(
-            text ?? "",
-            style: const TextStyle(
-              fontSize: 16,
-              color: AppColors.whiteColor,
-              fontWeight: FontWeight.w500,
-              fontFamily: "Poppins",
-            ),
+    Size size = MediaQuery.of(context).size;
+    double screenHeight = size.height;
+    double screenWidth = size.width;
+    EdgeInsets devicePadding = MediaQuery.of(context).viewPadding;
+    return Padding(
+      padding: EdgeInsets.all(screenWidth / 20),
+      child: ElevatedButton(
+        style: ButtonStyle(
+          backgroundColor: const MaterialStatePropertyAll(AppColors.darkGreenColor),
+          shape: MaterialStatePropertyAll(RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(
+            radius ?? 8,
+          ))),
+          fixedSize: MaterialStatePropertyAll(
+            Size(width!, hight!),
           ),
-        ],
+        ),
+        onPressed: onPress ?? () {},
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              text ?? "",
+              style: const TextStyle(
+                fontSize: 16,
+                color: AppColors.whiteColor,
+                fontWeight: FontWeight.w500,
+                fontFamily: "Poppins",
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

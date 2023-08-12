@@ -144,7 +144,7 @@ class _VerifyOtpState extends State<VerifyOtp> {
                           text: const TextSpan(
                         text: "Didn’t receive code?",
                         style: TextStyle(
-                          color: AppColors.darkGrayColor,
+                          color: AppColors.dlGrayColor,
                           fontSize: 16,
                           fontWeight: FontWeight.w500,
                         ),

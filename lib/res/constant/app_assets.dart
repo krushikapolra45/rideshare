@@ -8,4 +8,7 @@ class AppAssets {
   static const String appWelCome = "assets/images/welcome_screen.png";
   //sign up screen
   static const String country = "assets/images/country.png";
+  static const String apple = "assets/images/applelogo.png";
+  static const String gmail = "assets/images/Gmail.png";
+  static const String fb = "assets/images/facebook.png";
 }

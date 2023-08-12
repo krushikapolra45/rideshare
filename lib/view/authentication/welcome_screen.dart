@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:rideshare/res/common/app_button.dart';
+import 'package:rideshare/res/common/app_outline_button.dart';
 import 'package:rideshare/res/constant/app_assets.dart';
 import 'package:rideshare/res/constant/app_colors.dart';
 import 'package:rideshare/res/constant/app_strings.dart';
+import 'package:rideshare/view/authentication/sign_up.dart';
 
 class WelcomeScreen extends StatefulWidget {
   const WelcomeScreen({Key? key}) : super(key: key);
@@ -24,9 +26,12 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
       child: Scaffold(
         body: Column(
           children: [
-            Image.asset(
-              AppAssets.appWelCome,
-              width: screenWidth / 1.1,
+            Padding(
+              padding: const EdgeInsets.only(top: 20),
+              child: Image.asset(
+                AppAssets.appWelCome,
+                width: screenWidth / 1.1,
+              ),
             ),
             // SizedBox(height: screenHeight / 15),
             const Text(
@@ -48,43 +53,25 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
               ),
             ),
             const Spacer(),
-            Padding(
-              padding: const EdgeInsets.only(right: 8.0, left: 8.0),
-              child: AppButton(
-                text: "create an account",
-                width: screenWidth / 1.0,
-                hight: screenHeight / 16,
-                onPress: () {},
-              ),
+            AppButton(
+              text: "create an account",
+              width: screenWidth / 1.0,
+              hight: screenHeight / 16,
+              onPress: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const SignUp()),
+                );
+              },
+            ),
+            AppOutlineButton(
+              color: AppColors.darkGreenColor,
+              text: "log in",
+              width: screenWidth / 1.1,
+              hight: screenHeight / 16,
+              tColor: AppColors.darkGreenColor,
             ),
             SizedBox(height: screenHeight / 50),
-            Padding(
-              padding: EdgeInsets.all(screenWidth / 18.0),
-              child: OutlinedButton(
-                style: ButtonStyle(
-                  shape: MaterialStatePropertyAll(
-                    RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
-                  ),
-                  fixedSize: MaterialStatePropertyAll(
-                    Size(screenWidth / 1.0, screenHeight / 16),
-                  ),
-                  side: const MaterialStatePropertyAll(BorderSide(
-                    color: AppColors.darkGreenColor,
-                    width: 1,
-                  )),
-                ),
-                onPressed: () {},
-                child: const Text(
-                  "log in",
-                  style: TextStyle(
-                    fontSize: 16,
-                    color: AppColors.darkGreenColor,
-                    fontWeight: FontWeight.w400,
-                  ),
-                ),
-              ),
-            ),
-            SizedBox(height: screenHeight / 1.1),
           ],
         ),
       ),
