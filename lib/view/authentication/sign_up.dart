@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:gsform/gs_form/model/data_model/spinner_data_model.dart';
-import 'package:gsform/gs_form/widget/field.dart';
-import 'package:gsform/gs_form/widget/form.dart';
 import 'package:rideshare/res/common/app_arrow_back.dart';
 import 'package:rideshare/res/common/app_button.dart';
 import 'package:rideshare/res/common/app_email_text_filed.dart';
@@ -20,7 +17,6 @@ class SignUp extends StatefulWidget {
 }
 
 class _SignUpState extends State<SignUp> {
-  late GSForm form;
   bool checkvalue = false;
   @override
   Widget build(BuildContext context) {
@@ -42,7 +38,7 @@ class _SignUpState extends State<SignUp> {
                   child: const Align(
                     alignment: Alignment.topLeft,
                     child: Text(
-                      "Sign up with your email or\nphone number",
+                      AppStrings.singHadding,
                       style: TextStyle(
                         fontWeight: FontWeight.w500,
                         color: AppColors.darkGrayColor,
@@ -63,23 +59,6 @@ class _SignUpState extends State<SignUp> {
                   padding: EdgeInsets.all(screenWidth / 30),
                   child: const AppNumberTextFiled(),
                 ),
-                GSField.spinner(
-                  tag: 'customer_type',
-                  required: false,
-                  weight: 6,
-                  title: 'Gender',
-                  onChange: (model) {},
-                  items: [
-                    SpinnerDataModel(
-                      name: 'man',
-                      id: 1,
-                    ),
-                    SpinnerDataModel(
-                      name: 'woman',
-                      id: 2,
-                    ),
-                  ],
-                ),
                 Row(
                   children: [
                     Checkbox(
@@ -89,8 +68,6 @@ class _SignUpState extends State<SignUp> {
                         color: AppColors.dGreenColor,
                         width: 1,
                       )),
-                      // checkColor: AppColors.dGreenColor,
-                      // hoverColor: AppColors.dGreenColor,
                       activeColor: AppColors.dGreenColor,
                       onChanged: (value) {
                         debugPrint("value---> $value");
@@ -100,45 +77,36 @@ class _SignUpState extends State<SignUp> {
                       },
                     ),
                     RichText(
-                        text: const TextSpan(
-                      text: "By signing up. you agree to the ",
-                      style: TextStyle(
-                        color: AppColors.grayColor,
-                        fontSize: 12,
-                        fontWeight: FontWeight.w500,
-                      ),
-                    )),
-                    RichText(
-                        text: const TextSpan(
-                      text: "Terms of service ",
-                      style: TextStyle(
-                        color: AppColors.dlGreenColor,
-                        fontSize: 12,
-                        fontWeight: FontWeight.w500,
-                      ),
-                    )),
-                    RichText(
-                        text: const TextSpan(
-                      text: "and",
-                      style: TextStyle(
-                        color: AppColors.grayColor,
-                        fontSize: 12,
-                        fontWeight: FontWeight.w500,
-                      ),
-                    )),
-                  ],
-                ),
-                Align(
-                  alignment: Alignment.topLeft,
-                  child: RichText(
                       text: const TextSpan(
-                    text: "Privacy policy.",
-                    style: TextStyle(
-                      color: AppColors.dlGreenColor,
-                      fontSize: 12,
-                      fontWeight: FontWeight.w500,
+                        children: [
+                          TextSpan(
+                            text: "By signing up. you agree to the",
+                            style: TextStyle(
+                              color: AppColors.grayColor,
+                              fontSize: 12,
+                              fontWeight: FontWeight.w500,
+                            ),
+                          ),
+                          TextSpan(
+                            text: "Terms of Service",
+                            style: TextStyle(
+                              color: AppColors.dlGreenColor,
+                              fontSize: 12,
+                              fontWeight: FontWeight.w500,
+                            ),
+                          ),
+                          TextSpan(
+                            text: "and",
+                            style: TextStyle(
+                              color: AppColors.grayColor,
+                              fontSize: 12,
+                              fontWeight: FontWeight.w500,
+                            ),
+                          )
+                        ],
+                      ),
                     ),
-                  )),
+                  ],
                 ),
                 SizedBox(height: screenHeight / 40),
                 AppButton(
