@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'view/authentication/sign_up.dart';
+import 'view/authentication/complete_your_profile.dart';
 
 void main() {
   runApp(const MyApp());
@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
         fontFamily: "Poppins",
         useMaterial3: true,
       ),
-      home: const SignUp(),
+      home: CompleteYourProfile(),
     );
   }
 }

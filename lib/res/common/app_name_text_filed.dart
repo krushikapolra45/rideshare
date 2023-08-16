@@ -15,12 +15,16 @@ class AppNameTextFiled extends StatelessWidget {
       },
       decoration: InputDecoration(
         isDense: true,
-        // border: OutlineInputBorder(
-        //   borderRadius: BorderRadius.circular(10),
-        // ),
-        enabledBorder: OutlineInputBorder(
-          borderSide: BorderSide(width: 1, color: AppColors.grayColor),
+        border: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(8),
         ),
+        enabledBorder: OutlineInputBorder(
+          borderSide: BorderSide(
+            width: 1,
+            color: AppColors.grayColor,
+          ),
+        ),
+        focusColor: AppColors.grayColor,
         hintText: "Name",
         hintStyle: TextStyle(
           color: AppColors.lGrayColor,

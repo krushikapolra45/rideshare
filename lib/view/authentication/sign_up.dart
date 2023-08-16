@@ -1,23 +1,35 @@
 import 'package:flutter/material.dart';
+import 'package:intl_phone_number_input/intl_phone_number_input.dart';
 import 'package:rideshare/res/common/app_arrow_back.dart';
 import 'package:rideshare/res/common/app_button.dart';
 import 'package:rideshare/res/common/app_email_text_filed.dart';
 import 'package:rideshare/res/common/app_name_text_filed.dart';
-import 'package:rideshare/res/common/app_number_text_filed.dart';
 import 'package:rideshare/res/common/app_outline_button.dart';
 import 'package:rideshare/res/constant/app_assets.dart';
 import 'package:rideshare/res/constant/app_colors.dart';
 import 'package:rideshare/res/constant/app_strings.dart';
 
 class SignUp extends StatefulWidget {
-  const SignUp({Key? key}) : super(key: key);
+  SignUp({Key? key}) : super(key: key);
 
   @override
   State<SignUp> createState() => _SignUpState();
 }
 
 class _SignUpState extends State<SignUp> {
+  final GlobalKey<FormState> formKey = GlobalKey<FormState>();
+  final TextEditingController controller = TextEditingController();
+  String initialCountry = 'NG';
+  PhoneNumber number = PhoneNumber(isoCode: 'NG');
+
   bool checkvalue = false;
+
+  final List<String> gender = [
+    "mail",
+    "femail",
+    "other",
+  ];
+  String? _selectedGender;
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -55,9 +67,102 @@ class _SignUpState extends State<SignUp> {
                   padding: EdgeInsets.all(screenWidth / 30),
                   child: const AppEmailTextFiled(),
                 ),
+                Form(
+                  key: formKey,
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: <Widget>[
+                        InternationalPhoneNumberInput(
+                          onInputChanged: (PhoneNumber number) {
+                            print(number.phoneNumber);
+                          },
+                          onInputValidated: (bool value) {
+                            print(value);
+                          },
+                          selectorConfig: const SelectorConfig(
+                            selectorType: PhoneInputSelectorType.BOTTOM_SHEET,
+                          ),
+                          ignoreBlank: false,
+                          autoValidateMode: AutovalidateMode.disabled,
+                          selectorTextStyle: const TextStyle(
+                            color: AppColors.black,
+                          ),
+                          initialValue: number,
+                          textFieldController: controller,
+                          formatInput: true,
+                          keyboardType: const TextInputType.numberWithOptions(signed: true, decimal: true),
+                          inputBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(8),
+                          ),
+                          onSaved: (PhoneNumber number) {
+                            print('On Saved: $number');
+                          },
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
                 Padding(
                   padding: EdgeInsets.all(screenWidth / 30),
-                  child: const AppNumberTextFiled(),
+                  child: Container(
+                    width: screenWidth / 1.0,
+                    height: screenHeight / 14,
+                    decoration: BoxDecoration(
+                      border: Border.all(color: AppColors.lGrayColor, width: 1),
+                      borderRadius: BorderRadius.circular(8),
+                    ),
+                    child: DropdownButton<String>(
+                      value: _selectedGender,
+                      onChanged: (value) {
+                        setState(() {
+                          _selectedGender = value;
+                        });
+                      },
+                      hint: Padding(
+                        padding: const EdgeInsets.only(left: 8.0, top: 7),
+                        child: Text(
+                          'Gender',
+                          style: TextStyle(color: AppColors.lGrayColor),
+                        ),
+                      ),
+                      underline: Container(),
+                      dropdownColor: AppColors.whiteColor,
+                      icon: Padding(
+                        padding: const EdgeInsets.only(right: 8.0, top: 7),
+                        child: const Icon(
+                          Icons.keyboard_arrow_down,
+                          size: 30,
+                          color: AppColors.darkGrayColor,
+                        ),
+                      ),
+                      isExpanded: true,
+                      items: gender
+                          .map((e) => DropdownMenuItem(
+                                value: e,
+                                child: Container(
+                                  alignment: Alignment.centerLeft,
+                                  child: Text(
+                                    e,
+                                    style: const TextStyle(fontSize: 18),
+                                  ),
+                                ),
+                              ))
+                          .toList(),
+                      selectedItemBuilder: (BuildContext context) => gender
+                          .map((e) => Center(
+                                child: Text(
+                                  e,
+                                  style: const TextStyle(
+                                    fontSize: 18,
+                                    color: AppColors.lGrayColor,
+                                  ),
+                                ),
+                              ))
+                          .toList(),
+                    ),
+                  ),
                 ),
                 Row(
                   children: [
@@ -77,6 +182,7 @@ class _SignUpState extends State<SignUp> {
                       },
                     ),
                     RichText(
+                      maxLines: 2,
                       text: const TextSpan(
                         children: [
                           TextSpan(
@@ -102,7 +208,15 @@ class _SignUpState extends State<SignUp> {
                               fontSize: 12,
                               fontWeight: FontWeight.w500,
                             ),
-                          )
+                          ),
+                          // TextSpan(
+                          //   text: "Privacy policy.",
+                          //   style: TextStyle(
+                          //     color: AppColors.dlGreenColor,
+                          //     fontSize: 12,
+                          //     fontWeight: FontWeight.w500,
+                          //   ),
+                          // ),
                         ],
                       ),
                     ),
@@ -112,7 +226,7 @@ class _SignUpState extends State<SignUp> {
                 AppButton(
                   text: "Sign Up",
                   width: screenWidth / 1.0,
-                  hight: screenHeight / 16,
+                  height: screenHeight / 16,
                   onPress: () {},
                 ),
                 SizedBox(height: screenHeight / 70),
@@ -198,5 +312,19 @@ class _SignUpState extends State<SignUp> {
         ),
       ),
     );
+  }
+
+  void getPhoneNumber(String phoneNumber) async {
+    PhoneNumber number = await PhoneNumber.getRegionInfoFromPhoneNumber(phoneNumber, 'US');
+
+    setState(() {
+      this.number = number;
+    });
+  }
+
+  @override
+  void dispose() {
+    controller.dispose();
+    super.dispose();
   }
 }

@@ -5,16 +5,16 @@ class AppButton extends StatelessWidget {
   final String? text;
   final double? radius;
   final double? width;
-  final double? hight;
+  final double? height;
   final void Function()? onPress;
 
   const AppButton({
     Key? key,
     this.radius,
     this.width,
-    this.hight,
     this.onPress,
     this.text,
+    this.height,
   }) : super(key: key);
 
   @override
@@ -33,7 +33,7 @@ class AppButton extends StatelessWidget {
             radius ?? 8,
           ))),
           fixedSize: MaterialStatePropertyAll(
-            Size(width!, hight!),
+            Size(width!, height!),
           ),
         ),
         onPressed: onPress ?? () {},

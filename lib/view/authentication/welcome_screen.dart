@@ -56,11 +56,11 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
             AppButton(
               text: "create an account",
               width: screenWidth / 1.0,
-              hight: screenHeight / 16,
+              height: screenHeight / 16,
               onPress: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const SignUp()),
+                  MaterialPageRoute(builder: (context) => SignUp()),
                 );
               },
             ),

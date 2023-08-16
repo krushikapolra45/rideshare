@@ -15,12 +15,18 @@ class AppArrowBack extends StatelessWidget {
       padding: EdgeInsets.all(screenWidth / 22),
       child: Row(
         children: [
-          Icon(
+          const Icon(
             Icons.arrow_back_ios,
             color: AppColors.darkGrayColor,
             size: 16,
           ),
-          Text(AppStrings.authenticationTitle,
+          const Text(AppStrings.authenticationTitle,
+              style: TextStyle(
+                fontWeight: FontWeight.w400,
+                color: AppColors.darkGrayColor,
+              )),
+          SizedBox(width: screenWidth / 22),
+          const Text(AppStrings.profile,
               style: TextStyle(
                 fontWeight: FontWeight.w400,
                 color: AppColors.darkGrayColor,

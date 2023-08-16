@@ -166,7 +166,7 @@ class _VerifyOtpState extends State<VerifyOtp> {
                     child: AppButton(
                       text: " Verify",
                       width: screenWidth / 1.0,
-                      hight: screenHeight / 16,
+                      height: screenHeight / 16,
                       onPress: () {
                         formKey.currentState!.validate();
 

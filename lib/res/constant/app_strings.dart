@@ -26,4 +26,7 @@ class AppStrings {
   static const String password = "Set password";
   static const String sPassword = "Set your password";
   static const String lastLine = "Atleast 1 number or a special character";
+
+  //complete your profile
+  static const String profile = "Profile";
 }
