@@ -3,7 +3,8 @@ import 'package:rideshare/res/constant/app_colors.dart';
 import 'package:rideshare/res/constant/app_strings.dart';
 
 class AppArrowBack extends StatelessWidget {
-  const AppArrowBack({Key? key}) : super(key: key);
+  final String? name;
+  const AppArrowBack({Key? key, this.name}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -15,18 +16,14 @@ class AppArrowBack extends StatelessWidget {
       padding: EdgeInsets.all(screenWidth / 22),
       child: Row(
         children: [
-          const Icon(
-            Icons.arrow_back_ios,
-            color: AppColors.darkGrayColor,
-            size: 16,
-          ),
-          const Text(AppStrings.authenticationTitle,
+          Icon(Icons.arrow_back_ios, color: AppColors.darkGrayColor),
+          Text(AppStrings.authenticationTitle,
               style: TextStyle(
                 fontWeight: FontWeight.w400,
                 color: AppColors.darkGrayColor,
               )),
-          SizedBox(width: screenWidth / 22),
-          const Text(AppStrings.profile,
+          SizedBox(width: screenWidth / 5),
+          Text(name ?? "",
               style: TextStyle(
                 fontWeight: FontWeight.w400,
                 color: AppColors.darkGrayColor,

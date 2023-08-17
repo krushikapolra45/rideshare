@@ -29,4 +29,6 @@ class AppStrings {
 
   //complete your profile
   static const String profile = "Profile";
+  //send verification
+  static const String number = "Verifivation email or phone\n number";
 }

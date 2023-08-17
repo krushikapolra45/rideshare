@@ -11,4 +11,6 @@ class AppAssets {
   static const String apple = "assets/images/applelogo.png";
   static const String gmail = "assets/images/Gmail.png";
   static const String fb = "assets/images/facebook.png";
+  //home
+  static const String map = "assets/images/Map_two.png";
 }

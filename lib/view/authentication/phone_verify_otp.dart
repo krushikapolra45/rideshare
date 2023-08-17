@@ -6,17 +6,16 @@ import 'package:rideshare/res/common/app_arrow_back.dart';
 import 'package:rideshare/res/common/app_button.dart';
 import 'package:rideshare/res/constant/app_colors.dart';
 import 'package:rideshare/res/constant/app_strings.dart';
-import 'package:rideshare/view/authentication/set_password.dart';
+import 'package:rideshare/view/authentication/set_new_password.dart';
 
-class VerifyOtp extends StatefulWidget {
-  final String? phoneNumber;
-  const VerifyOtp({Key? key, this.phoneNumber}) : super(key: key);
+class PhoneVerifyOtp extends StatefulWidget {
+  const PhoneVerifyOtp({Key? key}) : super(key: key);
 
   @override
-  State<VerifyOtp> createState() => _VerifyOtpState();
+  State<PhoneVerifyOtp> createState() => _PhoneVerifyOtpState();
 }
 
-class _VerifyOtpState extends State<VerifyOtp> {
+class _PhoneVerifyOtpState extends State<PhoneVerifyOtp> {
   TextEditingController textEditingController = TextEditingController();
   StreamController<ErrorAnimationType>? errorController;
 
@@ -178,7 +177,7 @@ class _VerifyOtpState extends State<VerifyOtp> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => const SetPassword(),
+                              builder: (context) => const SetNewPassword(),
                             ),
                           );
                         } else {

@@ -7,6 +7,7 @@ class AppOutlineButton extends StatelessWidget {
   final Color? tColor;
   final String? text;
   final String? image;
+
   const AppOutlineButton({Key? key, this.hight, this.width, this.color, this.text, this.tColor, this.image}) : super(key: key);
 
   @override

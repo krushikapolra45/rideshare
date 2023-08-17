@@ -8,9 +8,10 @@ import 'package:rideshare/res/common/app_outline_button.dart';
 import 'package:rideshare/res/constant/app_assets.dart';
 import 'package:rideshare/res/constant/app_colors.dart';
 import 'package:rideshare/res/constant/app_strings.dart';
+import 'package:rideshare/view/authentication/verify_otp.dart';
 
 class SignUp extends StatefulWidget {
-  SignUp({Key? key}) : super(key: key);
+  const SignUp({Key? key}) : super(key: key);
 
   @override
   State<SignUp> createState() => _SignUpState();
@@ -70,7 +71,7 @@ class _SignUpState extends State<SignUp> {
                 Form(
                   key: formKey,
                   child: Padding(
-                    padding: const EdgeInsets.all(8.0),
+                    padding: EdgeInsets.all(screenWidth / 30),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
@@ -120,8 +121,8 @@ class _SignUpState extends State<SignUp> {
                           _selectedGender = value;
                         });
                       },
-                      hint: Padding(
-                        padding: const EdgeInsets.only(left: 8.0, top: 7),
+                      hint: const Padding(
+                        padding: EdgeInsets.only(left: 8.0, top: 7),
                         child: Text(
                           'Gender',
                           style: TextStyle(color: AppColors.lGrayColor),
@@ -129,9 +130,9 @@ class _SignUpState extends State<SignUp> {
                       ),
                       underline: Container(),
                       dropdownColor: AppColors.whiteColor,
-                      icon: Padding(
-                        padding: const EdgeInsets.only(right: 8.0, top: 7),
-                        child: const Icon(
+                      icon: const Padding(
+                        padding: EdgeInsets.only(right: 8.0, top: 7),
+                        child: Icon(
                           Icons.keyboard_arrow_down,
                           size: 30,
                           color: AppColors.darkGrayColor,
@@ -227,7 +228,18 @@ class _SignUpState extends State<SignUp> {
                   text: "Sign Up",
                   width: screenWidth / 1.0,
                   height: screenHeight / 16,
-                  onPress: () {},
+                  onPress: () {
+                    if (formKey.currentState!.validate()) {
+                      debugPrint("is valid");
+
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => const VerifyOtp()),
+                      );
+                    } else {
+                      debugPrint("is not valid");
+                    }
+                  },
                 ),
                 SizedBox(height: screenHeight / 70),
                 const Row(

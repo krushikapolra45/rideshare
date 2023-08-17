@@ -15,9 +15,9 @@ class AppEmailTextFiled extends StatelessWidget {
       },
       decoration: InputDecoration(
         isDense: true,
-        // border: OutlineInputBorder(
-        //   borderRadius: BorderRadius.circular(10),
-        // ),
+        border: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(10),
+        ),
         enabledBorder: OutlineInputBorder(
           borderSide: BorderSide(width: 1, color: AppColors.grayColor),
         ),
