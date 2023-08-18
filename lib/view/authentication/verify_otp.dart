@@ -152,7 +152,7 @@ class _VerifyOtpState extends State<VerifyOtp> {
                       )),
                       RichText(
                           text: const TextSpan(
-                        text: " Resend again",
+                        text: "Resend again",
                         style: TextStyle(
                           color: AppColors.darkGreenColor,
                           fontSize: 16,

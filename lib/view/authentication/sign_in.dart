@@ -19,6 +19,7 @@ class _SignInState extends State<SignIn> {
   @override
   Widget build(BuildContext context) {
     final GlobalKey<FormState> formKey = GlobalKey<FormState>();
+    var obscureText = true;
     Size size = MediaQuery.of(context).size;
     double screenHeight = size.height;
     double screenWidth = size.width;
@@ -46,6 +47,51 @@ class _SignInState extends State<SignIn> {
             Padding(
               padding: EdgeInsets.all(screenWidth / 30),
               child: AppEmailTextFiled(),
+            ),
+            Padding(
+              padding: EdgeInsets.all(screenWidth / 30),
+              child: TextFormField(
+                validator: (value) {
+                  if (RegExp(r'^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[!@#\$&*~]).{8,}$').hasMatch(value!)) {
+                    return "Please enter confirm password";
+                  }
+                  return null;
+                },
+                decoration: InputDecoration(
+                  suffixIcon: GestureDetector(
+                      onTap: () {
+                        setState(() {
+                          obscureText = !obscureText;
+                        });
+                      },
+                      child: obscureText
+                          ? Icon(
+                              Icons.visibility_off,
+                              color: AppColors.lGrayColor,
+                              size: 25,
+                            )
+                          : Icon(
+                              Icons.visibility,
+                              color: AppColors.lGrayColor,
+                              size: 25,
+                            )),
+                  isDense: true,
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  enabledBorder: OutlineInputBorder(
+                    borderSide: BorderSide(width: 1, color: AppColors.grayColor),
+                  ),
+                  hintText: "confirm password",
+                  hintStyle: TextStyle(
+                    color: AppColors.lGrayColor,
+                    fontSize: 16,
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+                obscureText: obscureText,
+                onTap: () {},
+              ),
             ),
             SizedBox(height: screenHeight / 40),
             AppButton(

@@ -31,4 +31,15 @@ class AppStrings {
   static const String profile = "Profile";
   //send verification
   static const String number = "Verifivation email or phone\n number";
+  //drawer
+  static const String dTitle = "back";
+  static const String dName = "Nate Samson";
+  static const String dGmail = "nate@email.con";
+  static const String dHistory = "History";
+  static const String dComplain = "Complain";
+  static const String dReferral = "Referral";
+  static const String dAboutUs = "About Us";
+  static const String dSettings = "Settings";
+  static const String dHelpAndSupport = "Help and Support";
+  static const String dLogout = "Logout";
 }

@@ -182,43 +182,45 @@ class _SignUpState extends State<SignUp> {
                         });
                       },
                     ),
-                    RichText(
-                      maxLines: 2,
-                      text: const TextSpan(
-                        children: [
-                          TextSpan(
-                            text: "By signing up. you agree to the",
-                            style: TextStyle(
-                              color: AppColors.grayColor,
-                              fontSize: 12,
-                              fontWeight: FontWeight.w500,
+                    Expanded(
+                      child: RichText(
+                        maxLines: 2,
+                        text: const TextSpan(
+                          children: [
+                            TextSpan(
+                              text: "By signing up. you agree to the",
+                              style: TextStyle(
+                                color: AppColors.grayColor,
+                                fontSize: 12,
+                                fontWeight: FontWeight.w500,
+                              ),
                             ),
-                          ),
-                          TextSpan(
-                            text: "Terms of Service",
-                            style: TextStyle(
-                              color: AppColors.dlGreenColor,
-                              fontSize: 12,
-                              fontWeight: FontWeight.w500,
+                            TextSpan(
+                              text: "Terms of Service",
+                              style: TextStyle(
+                                color: AppColors.dlGreenColor,
+                                fontSize: 12,
+                                fontWeight: FontWeight.w500,
+                              ),
                             ),
-                          ),
-                          TextSpan(
-                            text: "and",
-                            style: TextStyle(
-                              color: AppColors.grayColor,
-                              fontSize: 12,
-                              fontWeight: FontWeight.w500,
+                            TextSpan(
+                              text: "and",
+                              style: TextStyle(
+                                color: AppColors.grayColor,
+                                fontSize: 12,
+                                fontWeight: FontWeight.w500,
+                              ),
                             ),
-                          ),
-                          // TextSpan(
-                          //   text: "Privacy policy.",
-                          //   style: TextStyle(
-                          //     color: AppColors.dlGreenColor,
-                          //     fontSize: 12,
-                          //     fontWeight: FontWeight.w500,
-                          //   ),
-                          // ),
-                        ],
+                            TextSpan(
+                              text: "Privacy policy.",
+                              style: TextStyle(
+                                color: AppColors.dlGreenColor,
+                                fontSize: 12,
+                                fontWeight: FontWeight.w500,
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                   ],

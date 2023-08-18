@@ -12,5 +12,16 @@ class AppAssets {
   static const String gmail = "assets/images/Gmail.png";
   static const String fb = "assets/images/facebook.png";
   //home
-  static const String map = "assets/images/Map_two.png";
+  static const String map = "assets/images/fullmap.png";
+  static const String drawer = "assets/images/Menu.png";
+
+  //drawer
+  static const String drawerP = "assets/images/person.png";
+  static const String dh = "assets/images/note.png";
+  static const String dc = "assets/images/complain.png";
+  static const String dr = "assets/images/group.png";
+  static const String da = "assets/images/about.png";
+  static const String ds = "assets/images/setting.png";
+  static const String dhs = "assets/images/help.png";
+  static const String dl = "assets/images/logout.png";
 }
