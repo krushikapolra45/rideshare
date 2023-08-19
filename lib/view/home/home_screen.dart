@@ -3,6 +3,7 @@ import 'package:rideshare/res/common/app_drawer.dart';
 import 'package:rideshare/res/constant/app_assets.dart';
 import 'package:rideshare/res/constant/app_colors.dart';
 import 'package:rideshare/res/constant/app_strings.dart';
+import 'package:rideshare/view/notification/notification_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -26,7 +27,7 @@ class _HomeScreenState extends State<HomeScreen> {
         child: Padding(
           padding: devicePadding,
           child: Padding(
-            padding: const EdgeInsets.only(left: 10),
+            padding: EdgeInsets.only(left: 10),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -126,17 +127,26 @@ class _HomeScreenState extends State<HomeScreen> {
                   icon: const Icon(Icons.menu, size: 25),
                 ),
               ),
-              const Spacer(),
-              Padding(
-                padding: const EdgeInsets.only(top: 40, right: 10),
-                child: Container(
-                  width: screenWidth / 12,
-                  height: screenHeight / 30,
-                  color: AppColors.whiteColor,
-                  child: const Icon(
-                    Icons.notifications_none,
-                    size: 25,
-                    color: AppColors.darkGrayColor,
+              Spacer(),
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => NotificationScreen(),
+                      ));
+                },
+                child: Padding(
+                  padding: EdgeInsets.only(top: 40, right: 10),
+                  child: Container(
+                    width: screenWidth / 12,
+                    height: screenHeight / 30,
+                    color: AppColors.whiteColor,
+                    child: Icon(
+                      Icons.notifications_none,
+                      size: 25,
+                      color: AppColors.darkGrayColor,
+                    ),
                   ),
                 ),
               ),

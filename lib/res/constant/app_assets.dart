@@ -24,4 +24,14 @@ class AppAssets {
   static const String ds = "assets/images/setting.png";
   static const String dhs = "assets/images/help.png";
   static const String dl = "assets/images/logout.png";
+  //transport
+  static const String car = "assets/transport_image/mat_red_car.png";
+  static const String bike = "assets/transport_image/Bike.png";
+  static const String cycle = "assets/transport_image/Cycle.png";
+  static const String taxi = "assets/transport_image/Taxi.png";
+  //transport available car
+  static const String carOne = "assets/transport_image/whitecar.png";
+  static const String carTwo = "assets/transport_image/mustangcar.png";
+  static const String carThree = "assets/transport_image/car_red.png";
+  static const String carFour = "assets/transport_image/jaguarcar.png";
 }

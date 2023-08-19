@@ -13,7 +13,7 @@ class AppArrowBack extends StatelessWidget {
     double screenWidth = size.width;
     EdgeInsets devicePadding = MediaQuery.of(context).viewPadding;
     return Padding(
-      padding: EdgeInsets.all(screenWidth / 22),
+      padding: EdgeInsets.all(screenWidth / 30),
       child: Row(
         children: [
           Icon(Icons.arrow_back_ios, color: AppColors.darkGrayColor),
@@ -25,8 +25,9 @@ class AppArrowBack extends StatelessWidget {
           SizedBox(width: screenWidth / 5),
           Text(name ?? "",
               style: TextStyle(
-                fontWeight: FontWeight.w400,
+                fontWeight: FontWeight.w500,
                 color: AppColors.darkGrayColor,
+                fontSize: 18,
               )),
         ],
       ),

@@ -42,4 +42,28 @@ class AppStrings {
   static const String dSettings = "Settings";
   static const String dHelpAndSupport = "Help and Support";
   static const String dLogout = "Logout";
+  //notification
+  static const String nText = "Today";
+  static const String sText = "yesterday";
+  static const String payment = "Payment confirm";
+  static const String message = "Lorem ipsum dolor sit amet consectetur. Ultrici es\ntincidunt eleifend vitae";
+  static const String time = "15 min ago.";
+  static const String secondTime = "25 min ago.";
+  //transport
+
+  static const String heading = "Select your transport";
+  static const String car = "car";
+  static const String bike = "bike";
+  static const String cycle = "cycle";
+  static const String taxi = "taxi";
+  //select car
+  static const String carHedding = "Avaiable cars for ride";
+  static const String cText = "18 cars found";
+  static const String carOne = "BMW Cabrio";
+  static const String carTwo = "Mustang Shelby GT";
+  static const String carThree = "BMW 18";
+  static const String carFour = "Jaguar Silber";
+  static const String list = "Automatic   |   3 seats   |   Octane";
+  static const String location = "800m (5mins away)";
+  static const String button = "View car list";
 }
