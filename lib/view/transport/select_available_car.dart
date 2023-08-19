@@ -52,9 +52,9 @@ class _SelectAvailableCarState extends State<SelectAvailableCar> {
             padding: const EdgeInsets.all(8.0),
             child: Column(
               children: [
-                AppArrowBack(),
+                const AppArrowBack(),
                 SizedBox(height: screenHeight / 60),
-                Align(
+                const Align(
                   alignment: Alignment.topLeft,
                   child: Text(
                     AppStrings.carHedding,
@@ -65,7 +65,7 @@ class _SelectAvailableCarState extends State<SelectAvailableCar> {
                     ),
                   ),
                 ),
-                Align(
+                const Align(
                   alignment: Alignment.topLeft,
                   child: Text(
                     AppStrings.cText,
@@ -76,80 +76,90 @@ class _SelectAvailableCarState extends State<SelectAvailableCar> {
                     ),
                   ),
                 ),
-                ListView.separated(
-                  physics: const NeverScrollableScrollPhysics(),
-                  shrinkWrap: true,
-                  itemCount: colortextList.length,
-                  itemBuilder: (context, index) => Padding(
-                    padding: const EdgeInsets.only(top: 15),
-                    child: Container(
-                      height: screenHeight / 5,
-                      decoration: BoxDecoration(
-                        border: Border.all(
-                          color: AppColors.dlGreenColor,
-                          width: 1,
-                        ),
-                        borderRadius: BorderRadius.circular(10),
-                        color: AppColors.sKay,
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const SelectAvailableCar(),
                       ),
-                      child: Column(
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.only(left: 8, right: 8),
-                            child: Row(
-                              children: [
-                                Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text(
-                                      colortextList[index]["carName"],
-                                      style: const TextStyle(
-                                        fontSize: 16,
-                                        fontWeight: FontWeight.w500,
-                                        color: AppColors.dlGrayColor,
+                    );
+                  },
+                  child: ListView.separated(
+                    physics: const NeverScrollableScrollPhysics(),
+                    shrinkWrap: true,
+                    itemCount: colortextList.length,
+                    itemBuilder: (context, index) => Padding(
+                      padding: const EdgeInsets.only(top: 15),
+                      child: Container(
+                        height: screenHeight / 5,
+                        decoration: BoxDecoration(
+                          border: Border.all(
+                            color: AppColors.dlGreenColor,
+                            width: 1,
+                          ),
+                          borderRadius: BorderRadius.circular(10),
+                          color: AppColors.sKay,
+                        ),
+                        child: Column(
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.only(left: 8, right: 8),
+                              child: Row(
+                                children: [
+                                  Column(
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        colortextList[index]["carName"],
+                                        style: const TextStyle(
+                                          fontSize: 16,
+                                          fontWeight: FontWeight.w500,
+                                          color: AppColors.dlGrayColor,
+                                        ),
                                       ),
-                                    ),
-                                    Text(
-                                      colortextList[index]["list"],
-                                      style: const TextStyle(
-                                        fontSize: 12,
-                                        fontWeight: FontWeight.w500,
-                                        color: AppColors.grayColor,
+                                      Text(
+                                        colortextList[index]["list"],
+                                        style: const TextStyle(
+                                          fontSize: 12,
+                                          fontWeight: FontWeight.w500,
+                                          color: AppColors.grayColor,
+                                        ),
                                       ),
-                                    ),
-                                    Text(
-                                      colortextList[index]["location"],
-                                      style: const TextStyle(
-                                        fontSize: 12,
-                                        fontWeight: FontWeight.w500,
-                                        color: AppColors.darkGrayColor,
+                                      Text(
+                                        colortextList[index]["location"],
+                                        style: const TextStyle(
+                                          fontSize: 12,
+                                          fontWeight: FontWeight.w500,
+                                          color: AppColors.darkGrayColor,
+                                        ),
                                       ),
-                                    ),
-                                  ],
-                                ),
-                                Spacer(),
-                                Image.asset(
-                                  colortextList[index]["image"],
-                                  height: screenHeight / 10,
-                                  width: screenWidth / 5,
-                                ),
-                              ],
+                                    ],
+                                  ),
+                                  const Spacer(),
+                                  Image.asset(
+                                    colortextList[index]["image"],
+                                    height: screenHeight / 10,
+                                    width: screenWidth / 5,
+                                  ),
+                                ],
+                              ),
                             ),
-                          ),
-                          AppOutlineButton(
-                            color: AppColors.darkGreenColor,
-                            text: AppStrings.button,
-                            width: screenWidth / 1.1,
-                            hight: screenHeight / 16,
-                            tColor: AppColors.darkGreenColor,
-                          ),
-                        ],
+                            AppOutlineButton(
+                              color: AppColors.darkGreenColor,
+                              text: AppStrings.button,
+                              width: screenWidth / 1.1,
+                              hight: screenHeight / 16,
+                              tColor: AppColors.darkGreenColor,
+                            ),
+                          ],
+                        ),
                       ),
                     ),
+                    separatorBuilder: (context, index) => const SizedBox(
+                        // height: 50,
+                        ),
                   ),
-                  separatorBuilder: (context, index) => const SizedBox(
-                      // height: 50,
-                      ),
                 ),
               ],
             ),

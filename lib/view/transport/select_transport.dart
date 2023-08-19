@@ -3,6 +3,7 @@ import 'package:rideshare/res/common/app_arrow_back.dart';
 import 'package:rideshare/res/constant/app_assets.dart';
 import 'package:rideshare/res/constant/app_colors.dart';
 import 'package:rideshare/res/constant/app_strings.dart';
+import 'package:rideshare/view/transport/select_available_car.dart';
 
 class SelectTransport extends StatefulWidget {
   const SelectTransport({Key? key}) : super(key: key);
@@ -40,14 +41,14 @@ class _SelectTransportState extends State<SelectTransport> {
       padding: devicePadding,
       child: Scaffold(
         body: Padding(
-          padding: EdgeInsets.all(10),
+          padding: const EdgeInsets.all(10),
           child: Column(
             children: [
-              AppArrowBack(
+              const AppArrowBack(
                 name: "select transport",
               ),
               SizedBox(height: screenHeight / 40),
-              Text(
+              const Text(
                 AppStrings.heading,
                 style: TextStyle(
                   fontSize: 24,
@@ -56,42 +57,52 @@ class _SelectTransportState extends State<SelectTransport> {
                 ),
               ),
               Expanded(
-                child: GridView.builder(
-                  itemCount: arrayList.length,
-                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: 2,
-                    mainAxisSpacing: 10,
-                    crossAxisSpacing: 10,
-                    // mainAxisExtent: 210,
-                  ),
-                  itemBuilder: (context, index) => Padding(
-                    padding: const EdgeInsets.all(10),
-                    child: Container(
-                      decoration: BoxDecoration(
-                        border: Border.all(
-                          color: AppColors.dlGreenColor,
-                          width: 1,
-                        ),
-                        borderRadius: BorderRadius.circular(10),
-                        color: AppColors.sKay,
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const SelectAvailableCar(),
                       ),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Image.asset(
-                            arrayList[index]["image"],
-                            height: screenHeight / 10,
-                            width: screenWidth / 5,
+                    );
+                  },
+                  child: GridView.builder(
+                    itemCount: arrayList.length,
+                    gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                      crossAxisCount: 2,
+                      mainAxisSpacing: 10,
+                      crossAxisSpacing: 10,
+                      // mainAxisExtent: 210,
+                    ),
+                    itemBuilder: (context, index) => Padding(
+                      padding: const EdgeInsets.all(10),
+                      child: Container(
+                        decoration: BoxDecoration(
+                          border: Border.all(
+                            color: AppColors.dlGreenColor,
+                            width: 1,
                           ),
-                          Text(
-                            arrayList[index]["itemname"],
-                            style: const TextStyle(
-                              color: AppColors.dlGrayColor,
-                              fontSize: 16,
-                              fontWeight: FontWeight.w400,
+                          borderRadius: BorderRadius.circular(10),
+                          color: AppColors.sKay,
+                        ),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Image.asset(
+                              arrayList[index]["image"],
+                              height: screenHeight / 10,
+                              width: screenWidth / 5,
                             ),
-                          ),
-                        ],
+                            Text(
+                              arrayList[index]["itemname"],
+                              style: const TextStyle(
+                                color: AppColors.dlGrayColor,
+                                fontSize: 16,
+                                fontWeight: FontWeight.w400,
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                   ),

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import 'view/transport/select_available_car.dart';
+import 'package:rideshare/view/transport/car_details.dart';
 
 void main() {
   runApp(const MyApp());
@@ -20,7 +19,7 @@ class MyApp extends StatelessWidget {
         fontFamily: "Poppins",
         useMaterial3: true,
       ),
-      home: const SelectAvailableCar(),
+      home: const CarDetails(),
     );
   }
 }

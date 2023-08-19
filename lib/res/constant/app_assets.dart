@@ -34,4 +34,6 @@ class AppAssets {
   static const String carTwo = "assets/transport_image/mustangcar.png";
   static const String carThree = "assets/transport_image/car_red.png";
   static const String carFour = "assets/transport_image/jaguarcar.png";
+  //thank you
+  static const String tq = "assets/transport_image/done.png";
 }

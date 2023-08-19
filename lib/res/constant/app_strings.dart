@@ -66,4 +66,32 @@ class AppStrings {
   static const String list = "Automatic   |   3 seats   |   Octane";
   static const String location = "800m (5mins away)";
   static const String button = "View car list";
+  //car detail
+  static const String dHedding = "Mustang Shelby GT";
+  static const String reviews = "4.9 (531 reviews)";
+  static const String specification = "Specifications";
+  static const String battery = "Max. power";
+  static const String voalt = "2500hp";
+  static const String fuel = "Fuel";
+  static const String titer = "10km per litre";
+  static const String speed = "Max. speed";
+  static const String km = "230kph";
+  static const String mph = "0-60mph";
+  static const String sec = "2.5sec";
+  static const String feature = "Car features";
+  static const String fOne = "Model";
+  static const String fonee = "GT5000";
+  static const String fTwo = "Capacity";
+  static const String ftwoo = "760hp";
+  static const String fThree = "Color";
+  static const String fthreee = "Red";
+  static const String fFour = "Fuel type";
+  static const String ffourr = "Octane";
+  static const String fFive = "Gear type";
+  static const String fFivee = "Automatic";
+  static const String oButton = "Book later";
+  static const String Button = "Ride Now";
+  //thank you
+  static const String thku = "Thank you";
+  static const String thnkutext = "Your booking has been placed sent to\nMd. Sharif Ahmed";
 }
