@@ -14,21 +14,35 @@ class _HomeSecondScreenState extends State<HomeSecondScreen> {
   final Completer<GoogleMapController> _controller = Completer<GoogleMapController>();
 
   static const CameraPosition _kGooglePlex = CameraPosition(
-    target: LatLng(37.42796133580664, -122.085749655962),
+    target: LatLng(21.2439173, 72.8805682),
     zoom: 14.4746,
   );
-
+  BitmapDescriptor markerIcon = BitmapDescriptor.defaultMarker;
   static const CameraPosition _kLake = CameraPosition(
     bearing: 192.8334901395799,
-    target: LatLng(37.43296265331129, -122.08832357078792),
+    target: LatLng(21.2439173, 72.8805682),
     tilt: 59.440717697143555,
     zoom: 19.151926040649414,
   );
+
+  List<Marker> markers = [];
+  String _selectedOffice = '';
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: GoogleMap(
-        mapType: MapType.hybrid,
+        markers: <Marker>{
+          Marker(
+              markerId: MarkerId("id"),
+              position: LatLng(21.2439173, 72.8805682),
+              onTap: () {
+                // setState(() {
+                //   _selectedOffice = MarkerId("id");
+                // });
+              }),
+        },
+        mapType: MapType.normal,
         initialCameraPosition: _kGooglePlex,
         onMapCreated: (GoogleMapController controller) {
           _controller.complete(controller);
@@ -45,5 +59,8 @@ class _HomeSecondScreenState extends State<HomeSecondScreen> {
   Future<void> _goToTheLake() async {
     final GoogleMapController controller = await _controller.future;
     await controller.animateCamera(CameraUpdate.newCameraPosition(_kLake));
+    handelTap(LatLng tappedPoint) {
+      setState(() {});
+    }
   }
 }

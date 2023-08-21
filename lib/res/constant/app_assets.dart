@@ -36,4 +36,14 @@ class AppAssets {
   static const String carFour = "assets/transport_image/jaguarcar.png";
   //thank you
   static const String tq = "assets/transport_image/done.png";
+  //car details
+  static const String battery = "assets/transport_image/battory.png";
+  static const String desial = "assets/transport_image/desiol.png";
+  static const String wight = "assets/transport_image/wight.png";
+  static const String mph = "assets/transport_image/mph.png";
+  //request rent
+  static const String visa = "assets/transport_image/Visapayment.png";
+  static const String pPayment = "assets/transport_image/payment p.png";
+  static const String payment = "assets/transport_image/Payment.png";
+  static const String cash = "assets/transport_image/Cash on pay.png";
 }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:rideshare/view/transport/car_details.dart';
+
+import 'view/home/home_second_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
         fontFamily: "Poppins",
         useMaterial3: true,
       ),
-      home: const CarDetails(),
+      home: const HomeSecondScreen(),
     );
   }
 }

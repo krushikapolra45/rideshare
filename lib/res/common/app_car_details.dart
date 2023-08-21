@@ -2,11 +2,19 @@ import 'package:flutter/material.dart';
 import 'package:rideshare/res/constant/app_colors.dart';
 
 class AppCarDetails extends StatelessWidget {
-  const AppCarDetails({Key? key}) : super(key: key);
+  final String? text;
+  final String? name;
+  final String? image;
+  const AppCarDetails({Key? key, this.text, this.name, this.image}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
+    double screenHeight = size.height;
+    double screenWidth = size.width;
     return Container(
+      height: screenHeight / 10,
+      width: screenWidth / 5,
       decoration: BoxDecoration(
         border: Border.all(
           color: AppColors.dlGreenColor,
@@ -18,24 +26,25 @@ class AppCarDetails extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Icon(
-            Icons.battery_charging_full_outlined,
-            size: 30,
-            color: AppColors.dlGrayColor,
+          Image.asset(
+            image ?? "",
+            height: screenHeight / 30,
+            width: screenWidth / 30,
           ),
           Text(
+            text ?? "",
             style: TextStyle(
-              fontSize: 18,
+              fontSize: 10,
               fontWeight: FontWeight.w500,
-              color: AppColors.dlGrayColor,
+              color: AppColors.lGray,
             ),
           ),
           Text(
-            AppStrings.specification,
+            name ?? "",
             style: TextStyle(
-              fontSize: 18,
+              fontSize: 8,
               fontWeight: FontWeight.w500,
-              color: AppColors.dlGrayColor,
+              color: AppColors.lGray,
             ),
           ),
         ],

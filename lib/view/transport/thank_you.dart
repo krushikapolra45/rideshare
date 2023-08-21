@@ -49,16 +49,19 @@ class _ThankYouState extends State<ThankYou> {
               ),
             ),
             Spacer(),
-            AppButton(
-              text: "confirm ride",
-              width: screenWidth / 1.0,
-              height: screenHeight / 16,
-              onPress: () {
-                // Navigator.push(
-                //   context,
-                //   MaterialPageRoute(builder: (context) => SignUp()),
-                // );
-              },
+            Padding(
+              padding: const EdgeInsets.all(10),
+              child: AppButton(
+                text: "confirm ride",
+                width: screenWidth / 1.0,
+                height: screenHeight / 16,
+                onPress: () {
+                  // Navigator.push(
+                  //   context,
+                  //   MaterialPageRoute(builder: (context) => SignUp()),
+                  // );
+                },
+              ),
             )
           ],
         ),

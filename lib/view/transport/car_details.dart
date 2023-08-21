@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:rideshare/res/common/app_arrow_back.dart';
+import 'package:rideshare/res/common/app_button.dart';
+import 'package:rideshare/res/common/app_car_details.dart';
+import 'package:rideshare/res/common/app_car_feature.dart';
 import 'package:rideshare/res/constant/app_assets.dart';
 import 'package:rideshare/res/constant/app_colors.dart';
 import 'package:rideshare/res/constant/app_strings.dart';
+
+import '../../res/common/app_outline_button.dart';
 
 class CarDetails extends StatefulWidget {
   const CarDetails({Key? key}) : super(key: key);
@@ -22,7 +27,7 @@ class _CarDetailsState extends State<CarDetails> {
       body: ListView(
         children: [
           Padding(
-            padding: const EdgeInsets.all(8.0),
+            padding: const EdgeInsets.all(8),
             child: Column(
               children: [
                 const AppArrowBack(),
@@ -69,7 +74,6 @@ class _CarDetailsState extends State<CarDetails> {
                     SizedBox(width: screenWidth / 50),
                     Image.asset(
                       AppAssets.carThree,
-                      // height: screenHeight / 20,
                       width: screenWidth / 1.4,
                     ),
                     SizedBox(width: screenWidth / 30),
@@ -90,6 +94,85 @@ class _CarDetailsState extends State<CarDetails> {
                       color: AppColors.dlGrayColor,
                     ),
                   ),
+                ),
+                SizedBox(height: screenHeight / 50),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    AppCarDetails(
+                      image: AppAssets.battery,
+                      text: AppStrings.battery,
+                      name: AppStrings.voalt,
+                    ),
+                    AppCarDetails(
+                      image: AppAssets.desial,
+                      text: AppStrings.fuel,
+                      name: AppStrings.liter,
+                    ),
+                    AppCarDetails(
+                      image: AppAssets.wight,
+                      text: AppStrings.speed,
+                      name: AppStrings.km,
+                    ),
+                    AppCarDetails(
+                      image: AppAssets.mph,
+                      text: AppStrings.mph,
+                      name: AppStrings.sec,
+                    ),
+                  ],
+                ),
+                SizedBox(height: screenHeight / 50),
+                const Align(
+                  alignment: Alignment.topLeft,
+                  child: Text(
+                    AppStrings.feature,
+                    style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.w500,
+                      color: AppColors.dlGrayColor,
+                    ),
+                  ),
+                ),
+                AppCarFeature(
+                  name: AppStrings.fonee,
+                  text: AppStrings.fOne,
+                ),
+                SizedBox(height: screenHeight / 70),
+                AppCarFeature(
+                  name: AppStrings.ftwoo,
+                  text: AppStrings.fTwo,
+                ),
+                SizedBox(height: screenHeight / 70),
+                AppCarFeature(
+                  name: AppStrings.fthreee,
+                  text: AppStrings.fThree,
+                ),
+                SizedBox(height: screenHeight / 70),
+                AppCarFeature(
+                  name: AppStrings.ffourr,
+                  text: AppStrings.fFour,
+                ),
+                SizedBox(height: screenHeight / 70),
+                AppCarFeature(
+                  name: AppStrings.fFivee,
+                  text: AppStrings.fFive,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    AppOutlineButton(
+                      color: AppColors.darkGreenColor,
+                      text: AppStrings.oButton,
+                      width: screenWidth / 2.5,
+                      hight: screenHeight / 16,
+                      tColor: AppColors.darkGreenColor,
+                    ),
+                    AppButton(
+                      text: AppStrings.Button,
+                      width: screenWidth / 2.5,
+                      height: screenHeight / 16,
+                    )
+                  ],
                 ),
               ],
             ),

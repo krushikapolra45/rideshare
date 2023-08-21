@@ -73,7 +73,7 @@ class AppStrings {
   static const String battery = "Max. power";
   static const String voalt = "2500hp";
   static const String fuel = "Fuel";
-  static const String titer = "10km per litre";
+  static const String liter = "10km per litre";
   static const String speed = "Max. speed";
   static const String km = "230kph";
   static const String mph = "0-60mph";
@@ -94,4 +94,10 @@ class AppStrings {
   //thank you
   static const String thku = "Thank you";
   static const String thnkutext = "Your booking has been placed sent to\nMd. Sharif Ahmed";
+  //request rent
+  static const String paymentText = "Select payment method";
+  static const String visa = "**** **** **** 8970";
+  static const String miracor = "Expires: 12/26";
+  static const String pay = "mailaddress@mail.com";
+  static const String cash = "Cash";
 }
