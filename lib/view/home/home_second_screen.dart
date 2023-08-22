@@ -26,7 +26,6 @@ class _HomeSecondScreenState extends State<HomeSecondScreen> {
   );
 
   List<Marker> markers = [];
-  String _selectedOffice = '';
 
   @override
   Widget build(BuildContext context) {
@@ -34,13 +33,10 @@ class _HomeSecondScreenState extends State<HomeSecondScreen> {
       body: GoogleMap(
         markers: <Marker>{
           Marker(
-              markerId: MarkerId("id"),
-              position: LatLng(21.2439173, 72.8805682),
-              onTap: () {
-                // setState(() {
-                //   _selectedOffice = MarkerId("id");
-                // });
-              }),
+            markerId: MarkerId("id"),
+            position: LatLng(21.2439173, 72.8805682),
+            onTap: () {},
+          ),
         },
         mapType: MapType.normal,
         initialCameraPosition: _kGooglePlex,
