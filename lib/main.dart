@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'view/home/home_second_screen.dart';
+import 'view/contact_and_payment/payment.dart';
 
 void main() {
   runApp(const MyApp());
@@ -9,7 +9,6 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -20,7 +19,7 @@ class MyApp extends StatelessWidget {
         fontFamily: "Poppins",
         useMaterial3: true,
       ),
-      home: const HomeSecondScreen(),
+      home: const Payment(),
     );
   }
 }

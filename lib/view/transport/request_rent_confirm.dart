@@ -1,19 +1,21 @@
 import 'package:flutter/material.dart';
-import 'package:rideshare/res/common/app_arrow_back.dart';
 import 'package:rideshare/res/common/app_button.dart';
 import 'package:rideshare/res/common/payment_method.dart';
 import 'package:rideshare/res/constant/app_assets.dart';
 import 'package:rideshare/res/constant/app_colors.dart';
 import 'package:rideshare/res/constant/app_strings.dart';
+import 'package:rideshare/view/transport/thank_you.dart';
 
-class Payment extends StatefulWidget {
-  const Payment({Key? key}) : super(key: key);
+import '../../res/common/app_arrow_back.dart';
+
+class RequestRentConfirm extends StatefulWidget {
+  const RequestRentConfirm({Key? key}) : super(key: key);
 
   @override
-  State<Payment> createState() => _PaymentState();
+  State<RequestRentConfirm> createState() => _RequestRentConfirmState();
 }
 
-class _PaymentState extends State<Payment> {
+class _RequestRentConfirmState extends State<RequestRentConfirm> {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -29,9 +31,8 @@ class _PaymentState extends State<Payment> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const AppArrowBack(
-                name: "payment",
+                name: "Request for rent",
               ),
-              SizedBox(height: screenHeight / 40),
               Container(
                 height: screenHeight / 12,
                 decoration: BoxDecoration(
@@ -69,7 +70,7 @@ class _PaymentState extends State<Payment> {
                                 AppStrings.reviews,
                                 style: TextStyle(
                                   fontSize: 14,
-                                  fontWeight: FontWeight.w500,
+                                  fontWeight: FontWeight.w600,
                                   color: AppColors.grayColor,
                                 ),
                               ),
@@ -80,23 +81,21 @@ class _PaymentState extends State<Payment> {
                       const Spacer(),
                       Image.asset(
                         AppAssets.carThree,
-                        // height: screenHeight / 10,
                         width: screenWidth / 5,
                       ),
                     ],
                   ),
                 ),
               ),
-              SizedBox(height: screenHeight / 30),
+              SizedBox(height: screenHeight / 50),
               const Text(
                 AppStrings.charge,
                 style: TextStyle(
                   fontSize: 16,
-                  fontWeight: FontWeight.w500,
+                  fontWeight: FontWeight.w400,
                   color: AppColors.dlGrayColor,
                 ),
               ),
-              SizedBox(height: screenHeight / 80),
               const Row(
                 children: [
                   Text(
@@ -118,7 +117,6 @@ class _PaymentState extends State<Payment> {
                   ),
                 ],
               ),
-              SizedBox(height: screenHeight / 90),
               const Row(
                 children: [
                   Text(
@@ -140,32 +138,7 @@ class _PaymentState extends State<Payment> {
                   ),
                 ],
               ),
-              Divider(
-                color: AppColors.dGrayColor,
-                thickness: 1,
-              ),
-              Row(
-                children: [
-                  Text(
-                    AppStrings.totle,
-                    style: TextStyle(
-                      fontSize: 14,
-                      fontWeight: FontWeight.w400,
-                      color: AppColors.dlGrayColor,
-                    ),
-                  ),
-                  Spacer(),
-                  Text(
-                    AppStrings.priceTotle,
-                    style: TextStyle(
-                      fontSize: 14,
-                      fontWeight: FontWeight.w400,
-                      color: AppColors.dlGrayColor,
-                    ),
-                  ),
-                ],
-              ),
-              SizedBox(height: screenHeight / 40),
+              SizedBox(height: screenHeight / 50),
               const Align(
                 alignment: Alignment.topLeft,
                 child: Text(
@@ -177,7 +150,7 @@ class _PaymentState extends State<Payment> {
                   ),
                 ),
               ),
-              SizedBox(height: screenHeight / 30),
+              SizedBox(height: screenHeight / 50),
               Container(
                 height: screenHeight / 15,
                 decoration: BoxDecoration(
@@ -242,16 +215,16 @@ class _PaymentState extends State<Payment> {
                 title: AppStrings.cash,
                 image: AppAssets.cash,
               ),
-              SizedBox(height: screenHeight / 20),
+              SizedBox(height: screenHeight / 40),
               AppButton(
                 text: "confirm ride",
                 width: screenWidth,
                 height: screenHeight / 16,
                 onPress: () {
-                  // Navigator.push(
-                  //   context,
-                  //   MaterialPageRoute(builder: (context) => const ThankYou()),
-                  // );
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const ThankYou()),
+                  );
                 },
               )
             ],

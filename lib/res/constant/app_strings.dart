@@ -99,5 +99,16 @@ class AppStrings {
   static const String visa = "**** **** **** 8970";
   static const String miracor = "Expires: 12/26";
   static const String pay = "mailaddress@mail.com";
-  static const String cash = "Cash";
+  static const String charge = "Charge";
+  static const String houre = "Mustang/per hours";
+  static const String price = "\$200";
+  static const String cash = "Vat (5%)";
+  static const String priceOff = "\$20";
+  static const String totle = "Total";
+  static const String priceTotle = "\$220";
+  //message screen
+  static const String chatOne = "Good Evening!";
+  static const String chatTwo = "Welcome to Car2go Customer\n Service";
+  static const String chatThree = "Welcome to Car2go Customer Service";
+  static const String chatFour = "Just now";
 }
