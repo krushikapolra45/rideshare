@@ -5,6 +5,7 @@ import 'package:rideshare/res/common/payment_method.dart';
 import 'package:rideshare/res/constant/app_assets.dart';
 import 'package:rideshare/res/constant/app_colors.dart';
 import 'package:rideshare/res/constant/app_strings.dart';
+import 'package:rideshare/view/dialog/simple_dialog_screen.dart';
 
 class Payment extends StatefulWidget {
   const Payment({Key? key}) : super(key: key);
@@ -140,11 +141,11 @@ class _PaymentState extends State<Payment> {
                   ),
                 ],
               ),
-              Divider(
+              const Divider(
                 color: AppColors.dGrayColor,
                 thickness: 1,
               ),
-              Row(
+              const Row(
                 children: [
                   Text(
                     AppStrings.totle,
@@ -244,16 +245,16 @@ class _PaymentState extends State<Payment> {
               ),
               SizedBox(height: screenHeight / 20),
               AppButton(
-                text: "confirm ride",
-                width: screenWidth,
-                height: screenHeight / 16,
-                onPress: () {
-                  // Navigator.push(
-                  //   context,
-                  //   MaterialPageRoute(builder: (context) => const ThankYou()),
-                  // );
-                },
-              )
+                  width: screenWidth,
+                  height: screenHeight / 16,
+                  text: "confirm ride",
+                  onPress: () {
+                    showDialog(
+                        context: context,
+                        builder: (BuildContext context) {
+                          return SimpleDialogScreen();
+                        });
+                  }),
             ],
           ),
         ),

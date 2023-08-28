@@ -94,6 +94,7 @@ class AppStrings {
   //thank you
   static const String thku = "Thank you";
   static const String thnkutext = "Your booking has been placed sent to\nMd. Sharif Ahmed";
+  static const String thnkutexttwo = "Thank you for your valuable feedback and tip";
   //request rent
   static const String paymentText = "Select payment method";
   static const String visa = "**** **** **** 8970";
@@ -111,4 +112,17 @@ class AppStrings {
   static const String chatTwo = "Welcome to Car2go Customer\n Service";
   static const String chatThree = "Welcome to Car2go Customer Service";
   static const String chatFour = "Just now";
+  //dialog
+  static const String dtitle = "Payment Success";
+  static const String contain = "Your money has been successfully sent to\n Sergio Ramasis";
+  static const String amount = "Amount";
+  static const String dprice = "\$220";
+  static const String trip = "How is your trip?";
+  static const String tripText = "Youe feedback will help us to improve your\ndriving experience better";
+//feedback
+  static const String feedback = "Excellent";
+  static const String rate = "You rated Sergio Ramasis 4 star";
+  static const String ftext = "Write your text";
+  static const String sergio = "Give some tips to Sergio Ramasis";
+  static const String famount = "Enter other amount";
 }
