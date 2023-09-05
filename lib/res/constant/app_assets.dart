@@ -48,4 +48,7 @@ class AppAssets {
   static const String cash = "assets/transport_image/Cash on pay.png";
   //payment
   static const String feedback = "assets/transport_image/feedback.png";
+  //wallet
+  static const String up = "assets/transport_image/Up.png";
+  static const String down = "assets/transport_image/Down.png";
 }

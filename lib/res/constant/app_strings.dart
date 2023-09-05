@@ -125,4 +125,16 @@ class AppStrings {
   static const String ftext = "Write your text";
   static const String sergio = "Give some tips to Sergio Ramasis";
   static const String famount = "Enter other amount";
+
+  //wallet
+  static const String wPrice = "\$500";
+  static const String balance = "Available Balance";
+  static const String expend = "Total Expend";
+  static const String tranSection = "Transections";
+  static const String see = "see All";
+  static const String welTon = "Welton";
+  static const String wtime = "Today at 09:20 am";
+  static const String down = "-\$570.00";
+  static const String nathsam = "Nathsam";
+  static const String up = "\$570.00";
 }

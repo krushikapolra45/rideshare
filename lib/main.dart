@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'view/contact_and_payment/payment.dart';
+import 'view/wallet/wallet_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
         fontFamily: "Poppins",
         useMaterial3: true,
       ),
-      home: const Payment(),
+      home: const WalletScreen(),
     );
   }
 }
