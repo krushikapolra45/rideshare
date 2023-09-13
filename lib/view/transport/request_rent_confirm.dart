@@ -220,6 +220,7 @@ class _RequestRentConfirmState extends State<RequestRentConfirm> {
                 text: "confirm ride",
                 width: screenWidth,
                 height: screenHeight / 16,
+                color: AppColors.darkGreenColor,
                 onPress: () {
                   Navigator.push(
                     context,

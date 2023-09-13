@@ -230,6 +230,7 @@ class _SignUpState extends State<SignUp> {
                   text: "Sign Up",
                   width: screenWidth / 1.0,
                   height: screenHeight / 16,
+                  color: AppColors.darkGreenColor,
                   onPress: () {
                     if (formKey.currentState!.validate()) {
                       debugPrint("is valid");

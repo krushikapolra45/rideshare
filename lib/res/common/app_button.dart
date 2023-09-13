@@ -6,6 +6,7 @@ class AppButton extends StatelessWidget {
   final double? radius;
   final double? width;
   final double? height;
+  final Color? color;
   final void Function()? onPress;
 
   const AppButton({
@@ -15,6 +16,7 @@ class AppButton extends StatelessWidget {
     this.onPress,
     this.text,
     this.height,
+    this.color,
   }) : super(key: key);
 
   @override
@@ -25,7 +27,7 @@ class AppButton extends StatelessWidget {
     EdgeInsets devicePadding = MediaQuery.of(context).viewPadding;
     return ElevatedButton(
       style: ButtonStyle(
-        backgroundColor: const MaterialStatePropertyAll(AppColors.darkGreenColor),
+        backgroundColor: MaterialStatePropertyAll(color),
         shape: MaterialStatePropertyAll(RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(
           radius ?? 8,

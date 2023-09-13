@@ -165,6 +165,7 @@ class _PhoneVerifyOtpState extends State<PhoneVerifyOtp> {
                     padding: const EdgeInsets.only(right: 8.0, left: 8.0),
                     child: AppButton(
                       text: " Verify",
+                      color: AppColors.darkGreenColor,
                       width: screenWidth / 1.0,
                       height: screenHeight / 16,
                       onPress: () {

@@ -168,6 +168,7 @@ class _VerifyOtpState extends State<VerifyOtp> {
                       text: " Verify",
                       width: screenWidth / 1.0,
                       height: screenHeight / 16,
+                      color: AppColors.darkGreenColor,
                       onPress: () {
                         formKey.currentState!.validate();
 

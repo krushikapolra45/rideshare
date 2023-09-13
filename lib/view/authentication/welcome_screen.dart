@@ -57,6 +57,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
               text: "create an account",
               width: screenWidth / 1.0,
               height: screenHeight / 16,
+              color: AppColors.darkGreenColor,
               onPress: () {
                 Navigator.push(
                   context,

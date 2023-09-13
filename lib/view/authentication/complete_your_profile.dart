@@ -262,6 +262,7 @@ class _CompleteYourProfileState extends State<CompleteYourProfile> {
                   ),
                   AppButton(
                     text: "save",
+                    color: AppColors.darkGreenColor,
                     width: screenWidth / 2.4,
                     height: screenHeight / 16,
                   )

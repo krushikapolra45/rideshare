@@ -255,6 +255,7 @@ class _SimpleDialogScreenState extends State<SimpleDialogScreen> {
                                             text: "back Home",
                                             width: screenWidth / 1.0,
                                             height: screenHeight / 16,
+                                            color: AppColors.darkGreenColor,
                                             onPress: () {
                                               // Navigator.push(
                                               //   context,

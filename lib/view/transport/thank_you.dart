@@ -55,6 +55,7 @@ class _ThankYouState extends State<ThankYou> {
                 text: "confirm ride",
                 width: screenWidth / 1.0,
                 height: screenHeight / 16,
+                color: AppColors.darkGreenColor,
                 onPress: () {
                   // Navigator.push(
                   //   context,

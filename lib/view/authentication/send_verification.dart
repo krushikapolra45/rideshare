@@ -48,6 +48,7 @@ class _SendVerificationState extends State<SendVerification> {
             Spacer(),
             AppButton(
               text: "send otp",
+              color: AppColors.darkGreenColor,
               width: screenWidth / 1.0,
               height: screenHeight / 16,
               onPress: () {

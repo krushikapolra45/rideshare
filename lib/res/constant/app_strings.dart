@@ -137,4 +137,9 @@ class AppStrings {
   static const String down = "-\$570.00";
   static const String nathsam = "Nathsam";
   static const String up = "\$570.00";
+
+  //add amount
+  static const String textFild = "Enter Amount";
+  static const String addPayment = "AddPaymentMethod";
+  static const String paymentMethod = "Select Payment Method";
 }

@@ -171,6 +171,7 @@ class _CarDetailsState extends State<CarDetails> {
                       text: AppStrings.Button,
                       width: screenWidth / 2.5,
                       height: screenHeight / 16,
+                      color: AppColors.darkGreenColor,
                     )
                   ],
                 ),

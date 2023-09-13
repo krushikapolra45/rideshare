@@ -247,6 +247,7 @@ class _PaymentState extends State<Payment> {
               AppButton(
                   width: screenWidth,
                   height: screenHeight / 16,
+                  color: AppColors.darkGreenColor,
                   text: "confirm ride",
                   onPress: () {
                     showDialog(

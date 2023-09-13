@@ -96,6 +96,7 @@ class _SignInState extends State<SignIn> {
             SizedBox(height: screenHeight / 40),
             AppButton(
               text: "Sign Up",
+              color: AppColors.darkGreenColor,
               width: screenWidth / 1.0,
               height: screenHeight / 16,
               onPress: () {

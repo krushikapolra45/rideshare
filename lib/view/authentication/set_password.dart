@@ -155,6 +155,7 @@ class _SetPasswordState extends State<SetPassword> {
             ),
             AppButton(
               text: "Register",
+              color: AppColors.darkGreenColor,
               width: screenWidth / 1.0,
               height: screenHeight / 16,
               onPress: () {
