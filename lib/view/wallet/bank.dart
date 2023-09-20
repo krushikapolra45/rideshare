@@ -118,27 +118,81 @@ class _BankState extends State<Bank> {
                   ),
                 ),
               ),
-              // TextField(
-              //   decoration: InputDecoration(
-              //     border: OutlineInputBorder(
-              //       borderRadius: BorderRadius.circular(8),
-              //     ),
-              //   ),
-              // ),
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: AppButton(
-                    width: screenWidth,
-                    height: screenHeight / 16,
-                    text: "confirm",
-                    color: AppColors.darkGreenColor.withOpacity(0.40),
-                    onPress: () {
-                      // showDialog(
-                      //     context: context,
-                      //     builder: (BuildContext context) {
-                      //       return SimpleDialogScreen();
-                      //     });
-                    }),
+                  width: screenWidth,
+                  height: screenHeight / 16,
+                  text: "confirm",
+                  color: AppColors.darkGreenColor.withOpacity(0.40),
+                  onPress: () {
+                    showDialog(
+                        context: context,
+                        builder: (BuildContext context) {
+                          return AlertDialog(
+                            elevation: 0,
+                            content: Column(
+                              mainAxisSize: MainAxisSize.min,
+                              children: [
+                                CloseButton(
+                                  onPressed: () {},
+                                ),
+                                Image.asset(
+                                  AppAssets.tq,
+                                  width: screenWidth / 2,
+                                  height: screenHeight / 8,
+                                ),
+                                SizedBox(height: screenHeight / 60),
+                                const Text(
+                                  AppStrings.addsuc,
+                                  style: TextStyle(
+                                    fontSize: 22,
+                                    fontWeight: FontWeight.w500,
+                                    color: AppColors.dlGrayColor,
+                                  ),
+                                ),
+                                const Text(
+                                  textAlign: TextAlign.center,
+                                  AppStrings.addmoney,
+                                  style: TextStyle(
+                                    fontSize: 12,
+                                    fontWeight: FontWeight.w500,
+                                    color: AppColors.lGray,
+                                  ),
+                                ),
+                                SizedBox(height: screenHeight / 40),
+                                Text(
+                                  textAlign: TextAlign.center,
+                                  AppStrings.addamount,
+                                  style: TextStyle(
+                                    fontSize: 12,
+                                    fontWeight: FontWeight.w500,
+                                    color: AppColors.dlGrayColor,
+                                  ),
+                                ),
+                                SizedBox(height: screenHeight / 60),
+                                Text(
+                                  textAlign: TextAlign.center,
+                                  AppStrings.dprice,
+                                  style: TextStyle(
+                                    fontSize: 34,
+                                    fontWeight: FontWeight.w500,
+                                    color: AppColors.dlGrayColor,
+                                  ),
+                                ),
+                                AppButton(
+                                  width: screenWidth,
+                                  height: screenHeight / 16,
+                                  color: AppColors.darkGreenColor,
+                                  text: "Back Home",
+                                  onPress: () {},
+                                ),
+                              ],
+                            ),
+                          );
+                        });
+                  },
+                ),
               ),
               SizedBox(height: screenHeight / 30),
               Container(

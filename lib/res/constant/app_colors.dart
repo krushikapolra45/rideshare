@@ -18,4 +18,5 @@ class AppColors {
   static const Color sKay = Color(0xFFE2F5ED);
   static const Color pblack = Color(0xFF000000);
   static const Color blue = Color(0xFF304FFE);
+  static const Color orange = Color(0xFFF57F17);
 }

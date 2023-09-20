@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:rideshare/res/common/app_drawer_screen.dart';
+import 'package:rideshare/res/common/app_offer_screen.dart';
 import 'package:rideshare/res/constant/app_colors.dart';
 
 class OfferScreen extends StatefulWidget {
@@ -21,7 +22,7 @@ class _OfferScreenState extends State<OfferScreen> {
       padding: devicePadding,
       child: Scaffold(
         key: _scaffoldKey,
-        drawer: AppDrawerScreen(),
+        drawer: const AppDrawerScreen(),
         body: Column(
           children: [
             Row(
@@ -47,6 +48,39 @@ class _OfferScreenState extends State<OfferScreen> {
                   style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
                 ),
               ],
+            ),
+            SizedBox(height: screenHeight / 30),
+            AppOfferScreen(
+              name: "15 % off",
+              persent: "Black Friday",
+            ),
+            AppOfferScreen(
+              name: "5 % off",
+              persent: "Crismus",
+            ),
+            AppOfferScreen(
+              name: "15 % off",
+              persent: "Black Friday",
+            ),
+            AppOfferScreen(
+              name: "5 % off",
+              persent: "Crismus",
+            ),
+            AppOfferScreen(
+              name: "15 % off",
+              persent: "Black Friday",
+            ),
+            AppOfferScreen(
+              name: "5 % off",
+              persent: "Crismus",
+            ),
+            AppOfferScreen(
+              name: "15 % off",
+              persent: "Black Friday",
+            ),
+            AppOfferScreen(
+              name: "5 % off",
+              persent: "Crismus",
             ),
           ],
         ),

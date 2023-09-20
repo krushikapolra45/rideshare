@@ -105,6 +105,7 @@ class _SimpleDialogScreenState extends State<SimpleDialogScreen> {
               text: "please feedback",
               width: screenWidth / 1.2,
               height: screenHeight / 16,
+              color: AppColors.darkGreenColor,
               onPress: () {
                 showModalBottomSheet(
                   context: context,
@@ -219,6 +220,7 @@ class _SimpleDialogScreenState extends State<SimpleDialogScreen> {
                         child: AppButton(
                             width: screenWidth,
                             height: screenHeight / 16,
+                            color: AppColors.darkGreenColor,
                             text: "submit",
                             onPress: () {
                               showDialog(

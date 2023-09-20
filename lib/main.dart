@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'view/wallet/bank.dart';
+import 'view/offer/offer_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
         fontFamily: "Poppins",
         useMaterial3: true,
       ),
-      home: const Bank(),
+      home: OfferScreen(),
     );
   }
 }

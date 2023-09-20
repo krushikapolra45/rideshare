@@ -142,4 +142,8 @@ class AppStrings {
   static const String textFild = "Enter Amount";
   static const String addPayment = "AddPaymentMethod";
   static const String paymentMethod = "Select Payment Method";
+  //sucessfull
+  static const String addsuc = "Add Success";
+  static const String addmoney = "Your money has been add successfully ";
+  static const String addamount = "Amount";
 }
