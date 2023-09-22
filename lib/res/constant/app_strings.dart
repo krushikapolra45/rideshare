@@ -146,4 +146,6 @@ class AppStrings {
   static const String addsuc = "Add Success";
   static const String addmoney = "Your money has been add successfully ";
   static const String addamount = "Amount";
+  //complain
+  static const String complain = "Write your complain here (minimum 10 \n characters)";
 }
