@@ -148,4 +148,12 @@ class AppStrings {
   static const String addamount = "Amount";
   //complain
   static const String complain = "Write your complain here (minimum 10 \n characters)";
+  //complain dialog
+  static const String dialog = "Send successful";
+  static const String dtext = "Your complain has been send successful";
+  //referral
+  static const String referral = "Refer a friend and Earn \$20";
+  //about us
+  static const String about =
+      "Professional Rideshare Platform. Here we will\nprovide you only interesting content, which you will\nlike very much. We're dedicated to providing you\nthe best of Rideshare, with a focus on\ndependability and Earning. We're working to turn\nour passion for Rideshare into a booming online\nwebsite. We hope you enjoy our Rideshare as\nmuch as we enjoy offering them to you. I will keep\nposting more important posts on my Website for\nall of you. Please give your support and\nlove.Professional Rideshare Platform. Here we will\nprovide you only interesting content, which you\n will like very much. We're dedicated to providing you the best of Rideshare, with a focus on\ndependability and Earning. We're working to turn\nour passion for Rideshare into a booming online\nwebsite. We hope you enjoy our Rideshare as much as\nwe enjoy offering them to you. I will keep\nposting more important posts on my Website for\nall of you. Please give your support and love.";
 }
