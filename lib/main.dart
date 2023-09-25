@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'view/about_us_screen.dart';
+import 'view/help_and_support/help_and_support_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
         fontFamily: "Poppins",
         useMaterial3: true,
       ),
-      home: AboutUsScreen(),
+      home: HelpAndSupportScreen(),
     );
   }
 }

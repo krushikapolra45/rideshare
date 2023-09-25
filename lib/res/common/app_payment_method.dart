@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:rideshare/res/constant/app_colors.dart';
 
-class PaymentMethod extends StatelessWidget {
+class AddPaymentMethod extends StatelessWidget {
   final String? image;
   final String? name;
   final String? title;
-  const PaymentMethod({Key? key, this.image, this.name, this.title}) : super(key: key);
+  const AddPaymentMethod({Key? key, this.image, this.name, this.title}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

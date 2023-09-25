@@ -5,7 +5,7 @@ import 'package:rideshare/res/constant/app_colors.dart';
 import 'package:rideshare/res/constant/app_strings.dart';
 
 class AppDrawerScreen extends StatelessWidget {
-  const AppDrawerScreen({super.key});
+  const AppDrawerScreen({super.key, });
 
   @override
   Widget build(BuildContext context) {

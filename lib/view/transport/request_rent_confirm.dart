@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:rideshare/res/common/app_button.dart';
-import 'package:rideshare/res/common/payment_method.dart';
+import 'package:rideshare/res/common/app_payment_method.dart';
 import 'package:rideshare/res/constant/app_assets.dart';
 import 'package:rideshare/res/constant/app_colors.dart';
 import 'package:rideshare/res/constant/app_strings.dart';
@@ -198,19 +198,19 @@ class _RequestRentConfirmState extends State<RequestRentConfirm> {
                 ),
               ),
               SizedBox(height: screenHeight / 70),
-              const PaymentMethod(
+              const AddPaymentMethod(
                 name: AppStrings.miracor,
                 title: AppStrings.visa,
                 image: AppAssets.payment,
               ),
               SizedBox(height: screenHeight / 70),
-              const PaymentMethod(
+              const AddPaymentMethod(
                 name: AppStrings.miracor,
                 title: AppStrings.pay,
                 image: AppAssets.pPayment,
               ),
               SizedBox(height: screenHeight / 70),
-              const PaymentMethod(
+              const AddPaymentMethod(
                 name: AppStrings.miracor,
                 title: AppStrings.cash,
                 image: AppAssets.cash,
