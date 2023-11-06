@@ -317,7 +317,7 @@ class _SignUpState extends State<SignUp> {
                           fontSize: 16,
                           fontWeight: FontWeight.w500,
                         ),
-                      )),
+                      ),),
                     ],
                   ),
                 ),

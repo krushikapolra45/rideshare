@@ -51,6 +51,7 @@ class _SignInState extends State<SignIn> {
             Padding(
               padding: EdgeInsets.all(screenWidth / 30),
               child: TextFormField(
+
                 validator: (value) {
                   if (RegExp(r'^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[!@#\$&*~]).{8,}$').hasMatch(value!)) {
                     return "Please enter confirm password";

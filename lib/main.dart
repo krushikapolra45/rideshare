@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'view/help_and_support/help_and_support_screen.dart';
+import 'view/home/home_second_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
         fontFamily: "Poppins",
         useMaterial3: true,
       ),
-      home: HelpAndSupportScreen(),
+      home: const HomeSecondScreen(),
     );
   }
 }
